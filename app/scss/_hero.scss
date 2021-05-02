@@ -1,0 +1,81 @@
+.container-hero {
+  background-color: $veryPaleCyan;
+  background-image: url(/images/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 4rem;
+  margin-bottom: 5rem;
+
+  .container-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    .cta {
+      color: black;
+      background-color: white;
+      margin: auto 0;
+    }
+  }
+
+  .hero {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        max-width: 20rem;
+      }
+
+      p {
+        max-width: 33.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta {
+        text-align: center;
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+// Mobile Design
+
+@media (max-width: 1000px) {
+  .container-logo {
+    .logo {
+      width: 10rem;
+      margin: auto 0;
+    }
+
+    .cta {
+      padding: 0.7rem 2rem;
+    }
+  }
+  .container-hero {
+    background-image: url(/images/bg-hero-mobile.svg);
+    padding: 3rem 2rem;
+
+    .hero {
+      flex-direction: column;
+
+      &-text {
+        text-align: center;
+
+        & > * {
+          margin: 0 auto;
+        }
+
+        h1 {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

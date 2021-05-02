@@ -1,0 +1,116 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 5rem;
+  margin-bottom: 10rem;
+
+  .card {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 5rem 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 43rem;
+      padding-left: 5rem;
+      padding-right: 0;
+
+      p {
+        color: $grayingBlue;
+        font-size: 1rem;
+      }
+    }
+
+    &-image {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+
+      .card-text {
+        padding-left: 0;
+        padding-right: 1.2rem;
+      }
+
+      .card-image {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.container-card-build {
+  position: relative;
+  width: 100%;
+
+  .card-build {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 600px;
+    padding: 3rem 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta {
+      font-size: 1rem;
+      padding: 1.2rem 5rem;
+    }
+  }
+}
+
+// Mobile Design
+@media (max-width: 1000px) {
+  .cards {
+    padding: 0 3rem;
+
+    .card {
+      flex-direction: column-reverse !important;
+      padding: 1rem 0;
+
+      &-text {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      &-image {
+        padding: 0 1rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .container-card-build {
+    .card-build {
+      border-radius: 2rem;
+      width: 400px;
+
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
